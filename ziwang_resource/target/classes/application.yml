@@ -1,0 +1,28 @@
+server:
+  port: 9001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.101.39.237:6868/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 10.129.235.5
+    instance-id: ${eureka.instance.ip-address}:${spring.application.name}
+
+spring:
+  application:
+    name: ziwang-resource
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.101.39.237/ziwang_dev?characterEncoding=utf-8
+    username: root
+    password: 15956404411Zxl
+
+  jpa:
+    show-sql: true
+
+#熔断器
+feign:
+  hystrix:
+    enabled: true

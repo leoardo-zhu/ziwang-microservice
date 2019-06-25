@@ -1,0 +1,19 @@
+server:
+  port: 1200
+
+spring:
+  application:
+    name: ziwang-config
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leoardo-zhu/ziwang-config.git
+          username: 1192586094@qq.com
+          password: 15956404411Zxl
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.101.39.237:6868/eureka/

@@ -1,0 +1,27 @@
+server:
+  port: 9010
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.101.39.237:6868/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 10.129.235.5
+    instance-id: ${eureka.instance.ip-address}:${spring.application.name}
+
+spring:
+  application:
+    name: ziwang-sms
+
+  rabbitmq:
+    host: 47.101.39.237
+
+
+aliyun:
+  sms:
+    accessKeyId: LTAIgkD2nEoRyJnR
+    accessSecret: Td1TOlhjiBrqVW8NvNHULRLgwC10Tk
+    signName: 资网
+    templateCode: SMS_165119219
